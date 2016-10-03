@@ -15,6 +15,12 @@
       function openLeftDoor() {
         document.getElementById("leftDoorStatus").innerHTML = "Open";
         document.getElementById("rightDoor").removeAttribute("disabled");
+        console.log("Left Door Opened");
+      }
+      function openRightDoor(){
+        document.getElementById("rightDoorStatus").innerHTML = "Open";
+        document.getElementById("resetDoors").removeAttribute("disabled");
+        console.log("Right Door Opened");
       }
       /**
        * This function enables the reset door button and also updates the
@@ -31,6 +37,10 @@
       **/
       function reset(){
         document.getElementById("rightDoor").setAttribute("disabled", "");
+        document.getElementById("rightDoorStatus").innerHTML = "";
+        document.getElementById("leftDoorStatus").innerHTML = "";
+        document.getElementById("resetDoors").setAttribute("disabled","");
+        alert("Everything Reset!");
       }
     </script>
   </head>
